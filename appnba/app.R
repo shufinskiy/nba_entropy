@@ -10,7 +10,7 @@ nbadata <- read.csv('data/gamelog.csv')
 source('helpers.R')
 
 ui <- shiny::fluidPage(theme = shinythemes::shinytheme('flatly'),
-                shiny::titlePanel(shiny::h1('NBA season 2020/21 application', align = 'center'), windowTitle = 'NBA season 2020/21 application'),
+                shiny::titlePanel(shiny::h1('NBA season 2021/22 application', align = 'center'), windowTitle = 'NBA season 2021/22 application'),
                 
                 shiny::sidebarLayout(
                     shiny::sidebarPanel(width = 2,
@@ -21,10 +21,10 @@ ui <- shiny::fluidPage(theme = shinythemes::shinytheme('flatly'),
                                      choices = list("Rank day-to-day" = "dtd",
                                                     "NDAY by rank position" = 'nday'), selected = 'dtd'),
                         shiny::br(),
-                        shiny::sliderInput('ngame', 'N game', 1, 72, 10, 1),
+                        shiny::sliderInput('ngame', 'N game', 1, 82, 10, 1),
                         shiny::br(),
-                        shiny::dateRangeInput('date', 'Select daterange:', start = '2020-12-22', end = '2021-05-16', 
-                                       min = '2020-12-22', max = '2021-05-16', weekstart = 1),
+                        shiny::dateRangeInput('date', 'Select daterange:', start = '2021-10-19', end = '2022-04-10', 
+                                       min = '2021-10-19', max = '2022-04-10', weekstart = 1),
                         shiny::br(),
                         shiny::submitButton('Make')
                     ),
