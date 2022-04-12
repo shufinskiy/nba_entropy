@@ -16,9 +16,9 @@ get_leaguegamelog <- function(Season=2020, ...){
 
 t <- get_leaguegamelog(2021)
 
-if (dir.exists('./appnba/data')){
-  write.csv(t, './appnba/data/gamelog.csv', row.names = FALSE)
+if (dir.exists('./nba_entropy/data')){
+  write.csv(t, './nba_entropy/data/gamelog.csv', row.names = FALSE)
 } else {
-  dir.create('./appnba/data')
-  write.csv(t, './appnba/data/gamelog.csv', row.names = FALSE)
+  dir.create('./nba_entropy/data')
+  write.csv(t, './nba_entropy/data/gamelog.csv', row.names = FALSE)
 }

@@ -4,7 +4,7 @@ source('utils.R')
 
 ngame_sequence <- seq(10, 25)
 
-nba_data <- read_and_transform_gamelogs('appnba/data/gamelog.csv')
+nba_data <- read_and_transform_gamelogs('nba_entropy/data/gamelog.csv')
 
 date <- unique(sort(as.Date(nba_data$GAME_DATE), decreasing = FALSE))
 
